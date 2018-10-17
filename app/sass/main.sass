@@ -1,0 +1,130 @@
+@import "_fonts"
+@import "_libs"
+@import "_vars"
+@import "_media"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	margin: 0
+	padding: 0
+	&.ishome
+		.site-header
+			min-height: 700px
+			height: 100vh
+			background-color: #1a1a1a
+			background-size: cover
+			background-position: center
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			align-items: center
+.logo
+	img
+		width: 125px
+		height: auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.hamburder
+	.hamburger-box
+		width: 88px
+
+.top-line
+	width: 80%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	overflow: hidden
+	.menu
+		width: 60%
+		ul
+			height: 10vh
+			display: flex
+			justify-content: space-between
+			align-items: center
+			list-style-type: none
+			a
+				text-decoration: none
+				color: #fff
+				text-transform: uppercase
+				font-size: 18px
+.hamburger
+	right: 0
+	position: absolute
+	visibility: hidden
+	.hamburger-box
+		width: 34px
+		.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+			background-color: #fff
+			border-radius: 0
+			width: 34px
+			height: 2px
+
+.button
+	margin-top: 50px
+	display: flex
+	display: inline-block
+	border: none
+	color: #484543
+	text-decoration: none
+	background-color: $accent
+	padding: 10px 0
+	width: 240px
+	font-size: 18px
+	text-transform: uppercase
+	font-weight: bold
+	letter-spacing: 3px
+	border-radius: 3px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&:hover
+		background-color: lighten(#fed136, 5%)
+		&::after
+			opacity: .22
