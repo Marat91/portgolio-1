@@ -42,89 +42,328 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.75
+	line-height: 1.5
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
 	margin: 0
 	padding: 0
-	&.ishome
-		.site-header
-			min-height: 700px
-			height: 100vh
-			background-color: #1a1a1a
-			background-size: cover
-			background-position: center
-			display: flex
-			justify-content: space-between
-			flex-direction: column
-			align-items: center
-.logo
-	img
-		width: 125px
-		height: auto
+	color: #111
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 
-.hamburder
-	.hamburger-box
-		width: 88px
+strong, b
+	font-family: "RobotoBold", sans-serif
+	font-weight: normal
+	text-transform: uppercase
+
+h1, h2, h3, h4, h5, h6 .button
+	font-family: "RobotoCondensedBold", sans-serif
+	font-weight: normal
+	text-transform: uppercase
+
+.text-right
+	text-align: right
+
+.text-left
+	text-align: left
 
 .top-line
-	width: 80%
-	display: flex
-	justify-content: space-between
-	align-items: center
-	overflow: hidden
-	.menu
-		width: 60%
-		ul
-			height: 10vh
-			display: flex
-			justify-content: space-between
-			align-items: center
-			list-style-type: none
-			a
-				text-decoration: none
+	background-color: $main-color
+	text-align: center
+	border-bottom: lighten($main-color, 7%) 1px solid
+	position: relative
+	z-index: 2
+	a
+		color: #fff
+	ul, li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	.sf-menu
+		display: inline-block
+		margin: 0 auto -6px
+		float: none
+		font-family: "RobotoCondensedRegular", sans-serif
+		font-size: 16px
+		background-color: $main-color
+		a
+			border-bottom: lighten($main-color, 5%) 1px solid
+			border-left: transparent
+			border-top: none
+		>li
+			//border-bottom: lighten($main-color, 5%) 1px solid
+			&.active
+				background-color: darken($main-color, 3%)
+				>a
+					color: $accent
+
+			background-color: transparent
+			>a
 				color: #fff
-				text-transform: uppercase
-				font-size: 18px
-.hamburger
-	right: 0
+				border: none
+				padding: 25px 28px 25px
+			&:hover
+				background-color: darken($main-color, 3%)
+				>a
+					color: $accent
+			ul
+				li
+					background-color: $main-color
+					&:hover
+						>a
+							color: $accent
+					a
+						padding: 10px 20px
+						color: #fff
+	
+
+	>li
+		display: inline-block
+
+//top pannel
+.top-pannel
+	background-color: rgba(lighten($main-color, 2%), .8)
+	color: #fff
+	padding: 50px 0
 	position: absolute
-	visibility: hidden
-	.hamburger-box
-		width: 34px
-		.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
-			background-color: #fff
-			border-radius: 0
-			width: 34px
-			height: 2px
+	width: 100%
+	z-index: 1
+	box-shadow: rgba(255,255,255,.03) 0 5px 0 5px
+	&-content
+		position: relative
+		z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-image: url(../img/top-pannel-bg.jpg)
+		z-index: 0
+		opacity: .16
+	&-box
+		h4
+			font-family: 'RobotoCondensedBold', sans-serif
+			font-size: 15px
+			margin-top: 0
+			position: relative
+			&::after
+				position: absolute
+				left: 0
+				bottom: -9px
+				content: ''
+				height: 1px
+				width: 100%
+				background-color: $accent
+				opacity: .4
+		ul,li
+			padding: 0
+			margin: 0
+			list-style-type: none
+		li
+			display: inline-block
+			max-width: 48%
+			opacity: .4
+			font-size: 12px
+			padding: 0 10px 0 22px
+			position: relative
+			&:only-child
+				max-width: 100%
+			.fas
+				font-size: 16px
+				position: absolute
+				left: 0
+				top: 6px
+
+.logo
+	img
+		max-width: 100%
+	position: relative
+	top: 7px
+.top-phone
+	margin-top: -3px
+	font-size: 20px
+	font-family: 'RobotoCondensedRegular', sans-serif
+	span
+		font-size: 14px
+		opacity: .3
+.top-email
+	font-size: 14px
+	a
+		color: #fff
+		text-decoration: underline
+	span
+		opacity: .3
+.top-phone
+	.fas
+		margin-right: 4px
 
 .button
-	margin-top: 50px
-	display: flex
 	display: inline-block
-	border: none
-	color: #484543
-	text-decoration: none
+	color: #222
 	background-color: $accent
-	padding: 10px 0
-	width: 240px
-	font-size: 18px
-	text-transform: uppercase
-	font-weight: bold
-	letter-spacing: 3px
-	border-radius: 3px
-	text-align: center
+	padding: 10px 30px
+	font-size: 15px
+	border-radius: 2px
 	position: relative
-	outline: none
-	transition: background-color .1s ease
-	cursor: pointer
-	&:hover
-		background-color: lighten(#fed136, 5%)
+	text-transform: uppercase
+	transition: background-color .25s ease
+
+	&::after
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 30%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+
+	&:hover, &:focus
+		background-color: lighten($accent, 13%)
+		text-decoration: none
+		color: #222
+
+	&:active
+		background-color: darken($accent, 10%)
+	&-small
+		font-size: 14px
+		padding: 6px 22px
 		&::after
-			opacity: .22
+			height: 2px
+.top-button
+	margin-top: 22px
+
+.slider-wrap
+	.slider-nav-container
+		position: relative
+	.owl-nav
+		position: absolute
+		width: 100%
+		z-index: 2
+		top: 0
+		color: #fff
+		font-size: 26px
+		>div
+			cursor: pointer
+			position: absolute
+			top: 400px
+			&.next
+				right: 0
+
+.slider
+	width: 100%
+	overflow-x: hidden
+	.owl-dots
+		position: absolute
+		bottom: 60px
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			margin: 0 3px
+			width: 14px
+			height: 14px
+			background-color: darken($main-color, 10%)
+			border-radius: 10em
+			cursor: pointer
+			transition: background-color .25s ease
+			&.active
+				background-color: $accent
+		
+	.slide-wrap
+		float: left
+		&.active
+			h2
+				opacity: 1
+				left: 0
+			p
+				opacity: 1
+				left: 0
+			.slide-img-wrap
+				opacity: 1
+				transform: scale(1)
+
+
+	.slide
+		color: #fff
+		padding-bottom: 100px
+		position: relative
+		padding-top: 220px
+		h2
+			font-family: 'RobotoCondensedLight', sans-serif
+			font-size: 48px
+			margin-top: 0
+			line-height: 55px
+			margin-bottom: 20px
+			position: relative
+			left: 100px
+			opacity: 0
+			transition: all 1s ease
+			&:first-line
+				color: $accent
+		p
+			font-family: 'RobotoLight', sans-serif
+			opacity: .75
+			margin-bottom: 25px
+			position: relative
+			left: 50px
+			opacity: 0
+			transition: all 1.5s ease
+			transition-delay: .15s
+
+		&-bg
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			background-size: cover
+			&::before
+				content: ''
+				background-color: $main-color
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				position: absolute
+				opacity: .85
+		&-content
+			position: relative
+			z-index: 1
+			padding-top: 80px
+.slide-img-wrap
+	padding-top: 12px
+	opacity: 0
+	transform: scale(.8)
+	transition: all 1s
+	transition-delay: .25s
+	img
+		max-width: 100%
+
+//mobile-mnu
+.mobile-mnu
+	height: 50px
+	background-color: #fff
+	z-index: 2
+	position: relative
+
+.hamburger
+	z-index: 3
+	right: 0
+	position: absolute
+	.hamburger-box
+		width: 34px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	border-radius: 0
+	width: 34px
+	height: 2px
+	background-color: #222
