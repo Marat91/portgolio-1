@@ -1,9 +1,12 @@
-@import "vars"
+@import "_vars"
 
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	body
+		.sect-services
+			.sect-wrap
 	.top-pannel
 		.top-email
 			font-size: 13px
@@ -58,7 +61,17 @@
 			.owl-nav
 				div
 					top: 255px
-
+@media only screen and (max-width : 688px)
+	body
+		.sect-services
+			.sect-wrap
+				width: 100%
+				padding: 0 15px
+				.service-item
+					width: 100%
+					min-height: 400px
+					.service-item-image
+						background-position: center
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.logo
