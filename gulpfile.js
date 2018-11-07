@@ -31,6 +31,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jQuery.mmenu/jquery.mmenu.all.js',
 		'app/libs/superfish-master/dist/js/superfish.min.js',
 		'app/libs/owl.carousel/owl.carousel.js',
+		'app/libs/dimsemenov-Magnific-Popup-2ff1692/dist/jquery.magnific-popup.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

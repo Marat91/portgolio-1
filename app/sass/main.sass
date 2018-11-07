@@ -72,6 +72,9 @@ h1, h2, h3, h4, h5, h6 .button,
 .text-left
 	text-align: left
 
+.text-center
+	text-align: center
+
 .top-line
 	background-color: $main-color
 	text-align: center
@@ -216,6 +219,7 @@ h1, h2, h3, h4, h5, h6 .button,
 	position: relative
 	text-transform: uppercase
 	transition: background-color .25s ease
+	border: none
 
 	&::after
 		position: absolute
@@ -591,7 +595,9 @@ h1, h2, h3, h4, h5, h6 .button,
 	.footer-about
 		opacity: .4
 		font-size: 13px
-		margin-top: 28px
+		margin:
+			bottom: 40px
+			top: 28px
 	.top-pannel-box
 		margin-bottom: 25px
 		li
@@ -618,3 +624,22 @@ h1, h2, h3, h4, h5, h6 .button,
 			.fas
 				opacity: .4
 				transition: all .5s ease
+	.top-button
+		margin-bottom: 30px
+.popup-form
+	h3
+		text-align: center
+	label, input
+		display: block
+		width: 100%
+	label
+		margin-bottom: 12px
+		span
+			font-size: 14px
+			color: #999
+	input
+		border: $accent 3px solid
+		padding: 4px 10px
+	.button
+		margin-top: 15px
+		margin-bottom: 10px
